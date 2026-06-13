@@ -3,186 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BRAINROT PANEL</title>
+    <title>System Status Monitor</title>
     <style>
-        * { box-sizing: border-box; user-select: none; }
         body {
-            background: #1a1a1a;
-            font-family: 'Segoe UI', 'Courier New', monospace;
-            color: #ccc;
-            padding: 20px;
-            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            padding: 40px;
         }
         .container {
-            max-width: 1400px;
+            max-width: 500px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             margin: 0 auto;
-            background: #2a2a2a;
-            border-radius: 28px;
-            padding: 25px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
-        h1 {
-            text-align: center;
-            font-size: 3rem;
-            letter-spacing: 4px;
-            text-shadow: 0 0 5px #0f0;
-            color: #9eff9e;
+        h2 {
             margin-top: 0;
+            color: #2c3e50;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
         }
-        .sub {
-            text-align: center;
-            color: #ffaa66;
-            margin-bottom: 30px;
-            font-size: 0.9rem;
-            border-bottom: 1px dashed #444;
-            display: inline-block;
-            width: 100%;
+        .info-group {
+            margin: 15px 0;
         }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 18px;
-        }
-        .card {
-            background: #1f1f1f;
-            border-left: 5px solid #ff6600;
-            border-radius: 18px;
-            padding: 12px 15px;
-            transition: all 0.1s ease;
-        }
-        .card h3 {
-            margin: 0 0 10px 0;
-            color: #ffaa44;
-            font-size: 1.4rem;
-        }
-        .btn-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 8px;
-        }
-        button {
-            background: #3a3a3a;
-            border: none;
-            color: white;
-            padding: 8px 14px;
-            border-radius: 40px;
+        .label {
             font-weight: bold;
-            font-size: 0.8rem;
-            cursor: pointer;
-            transition: 0.05s linear;
-            box-shadow: 0 1px 3px black;
+            color: #7f8c8d;
         }
-        button:hover {
-            background: #ff8800;
-            color: #000;
-            transform: scale(0.96);
-        }
-        button:active {
-            background: #ff3300;
-        }
-        .status {
-            background: #000000aa;
-            border-radius: 12px;
-            padding: 6px 12px;
-            font-size: 0.75rem;
-            text-align: center;
-            margin-bottom: 15px;
+        .value {
             font-family: monospace;
+            background: #f8f9fa;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
         }
-        footer {
-            text-align: center;
-            margin-top: 30px;
-            font-size: 0.7rem;
-            color: #666;
-        }
-        hr { border-color: #333; }
     </style>
 </head>
 <body>
+
 <div class="container">
-    <h1>⚡ STEAL A BRAINROT GAME ⚡</h1>
-    <div class="sub">Copyright C SAB. ROBLOX LIT // REMOTE TRIGGER v1.0</div>
-    <div class="status" id="statusMsg">🌐 waiting for local server (127.0.0.1:8080) ...</div>
-
-    <div class="grid">
-        <!-- BAT / Open-Error -->
-        <div class="card"><h3>💀 ERROR BATS</h3><div class="btn-group">
-            <button onclick="trigger('bat','Open-Error','error-chrome-r.bat')">⛔ error-chrome-r</button>
-            <button onclick="trigger('bat','Open-Error','error-discord-r.bat')">⛔ error-discord-r</button>
-            <button onclick="trigger('bat','Open-Error','error-roblox-r.bat')">⛔ error-roblox-r</button>
-        </div></div>
-
-        <!-- BAT / Open-Apps -->
-        <div class="card"><h3>📂 OPEN APPS</h3><div class="btn-group">
-            <button onclick="trigger('bat','Open-Apps','open-calc-a.bat')">🧮 calc</button>
-            <button onclick="trigger('bat','Open-Apps','open-notepad-a.bat')">📝 notepad</button>
-        </div></div>
-
-        <!-- BAT / Open-Chrome -->
-        <div class="card"><h3>🌐 CHROME LINKS</h3><div class="btn-group">
-            <button onclick="trigger('bat','Open-Chrome','open-google-c.bat')">🔍 Google</button>
-            <button onclick="trigger('bat','Open-Chrome','open-roblox-c.bat')">📦 Roblox</button>
-            <button onclick="trigger('bat','Open-Chrome','open-r34-c.bat')">🔞 R34</button>
-            <button onclick="trigger('bat','Open-Chrome','open-youtube-c.bat')">📺 YouTube</button>
-            <button onclick="trigger('bat','Open-Chrome','open-chatgpt-c.bat')">🤖 ChatGPT</button>
-            <button onclick="trigger('bat','Open-Chrome','open-ph-c.bat')">💋 PH</button>
-        </div></div>
-
-        <!-- SOU soundboard -->
-        <div class="card"><h3>🔊 SOUNDBOARD</h3><div class="btn-group">
-            <button onclick="trigger('sou','','clapping.mp3')">👏 clapping</button>
-            <button onclick="trigger('sou','','sab-dragon-cannelloni.mp3')">🐉 dragon cannelloni</button>
-            <button onclick="trigger('sou','','sab-strawberry-elephant.mp3')">🍓 strawberry elephant</button>
-            <button onclick="trigger('sou','','scary-girl.mp3')">👻 scary girl</button>
-            <button onclick="trigger('sou','','smoke-alarm-beep.mp3')">🚨 smoke alarm</button>
-            <button onclick="trigger('sou','','asmr.mp3')">🎧 asmr</button>
-            <button onclick="trigger('sou','','discord-call.mp3')">📞 discord call</button>
-            <button onclick="trigger('sou','','discord-notification.mp3')">🔔 discord notif</button>
-        </div></div>
-
-        <!-- VID mp4 -->
-        <div class="card"><h3>🎬 FULLSCREEN VIDEOS</h3><div class="btn-group">
-            <button onclick="trigger('vid','','arabic.mp4')">🇸🇦 arabic</button>
-            <button onclick="trigger('vid','','flight23.mp4')">✈️ flight23</button>
-        </div></div>
-
-        <!-- PS1 scripts -->
-        <div class="card"><h3>⚙️ POWERSHELL MAYHEM</h3><div class="btn-group">
-            <button onclick="trigger('ps1','','throw-mouse.ps1')">🐭 throw-mouse</button>
-            <button onclick="trigger('ps1','','volume-100.ps1')">🔊 volume 100%</button>
-            <button onclick="trigger('ps1','','mini-tabs.ps1')">📑 mini-tabs</button>
-        </div></div>
+    <h2>Device Telemetry</h2>
+    
+    <div class="info-group">
+        <span class="label">PC Name:</span> 
+        <span id="pcname" class="value">No data</span>
     </div>
-    <hr>
-    <footer>⚠️ local HTTP server must be running on same machine. Connect.bat monitors Roblox/Discord/Chrome.</footer>
+    
+    <div class="info-group">
+        <span class="label">Operating System:</span> 
+        <span id="os" class="value">No data</span>
+    </div>
+    
+    <div class="info-group">
+        <span class="label">Status:</span> 
+        <span id="status" class="value">No data</span>
+    </div>
 </div>
-<script>
-    const SERVER = 'http://127.0.0.1:8080';
-    const statusDiv = document.getElementById('statusMsg');
 
-    async function trigger(category, subFolder, filename) {
-        let url = `${SERVER}/exec?category=${category}&sub=${subFolder}&file=${encodeURIComponent(filename)}`;
-        statusDiv.innerText = `🚀 sending: ${category}/${subFolder}/${filename}`;
-        try {
-            let res = await fetch(url, { method: 'POST' });
-            let text = await res.text();
-            statusDiv.innerText = `✅ executed: ${filename} (${res.status})`;
-            setTimeout(() => {
-                if(statusDiv.innerText.includes('executed')) statusDiv.innerText = '🎮 ready for next trigger';
-            }, 2000);
-        } catch(e) {
-            statusDiv.innerText = `❌ error: ${e.message} — is server running?`;
+<script>
+    // Parse query parameters from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    const pcNameParam = urlParams.get('pcname');
+    const osParam = urlParams.get('os');
+    const statusParam = urlParams.get('status');
+
+    // Update the DOM if parameters exist
+    if (pcNameParam) document.getElementById('pcname').textContent = pcNameParam;
+    if (osParam) document.getElementById('os').textContent = osParam;
+    if (statusParam) {
+        const statusElement = document.getElementById('status');
+        statusElement.textContent = statusParam.toUpperCase();
+        if (statusParam.toLowerCase() === 'running') {
+            statusElement.style.color = '#27ae60';
         }
     }
-
-    // ping server every 5 sec to show alive
-    setInterval(async () => {
-        try {
-            let res = await fetch(`${SERVER}/ping`);
-            if(res.ok) statusDiv.innerText = '🟢 connected to local server';
-        } catch(e) { /* ignore */ }
-    }, 5000);
 </script>
+
 </body>
 </html>
